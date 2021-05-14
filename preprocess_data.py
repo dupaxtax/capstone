@@ -15,6 +15,6 @@ total_percentage = (missing_data.sum()/data.shape[0]) *100
 print(f'The total percentage of missing data is {round(total_percentage,2)}%')
 
 total = data.isnull().sum().sort_values(ascending=False)
-percent_total = (data.isnull().sum()/data.isnull().coun()).sort_values(ascending=False)*100
+percent_total = (data.isnull().sum()/data.isnull().count()).sort_values(ascending=False)*100
 missing = pd.concat([total, percent_total], axis=1, keys=["Total", "Percentage"])
 missing_data = missing[missing['Total']>0]
