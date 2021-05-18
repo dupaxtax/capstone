@@ -24,7 +24,7 @@ forest = RandomForestClassifier(n_estimators=1000, n_jobs=-1, class_weight='bala
 
 feat_selector = BorutaPy(forest, n_estimators='auto', verbose=2)
 
-feat_selector.fit(X,y)
+feat_selector.fit(X, y)
 
 most_important = data.columns[:1][feat_selector.support_].toList()
 
